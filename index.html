@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rod's Journal Site</title>
+    <script type="text/javascript">
+      function loadDoc(){
+        var Connect = new XMLHttpRequest();
+        // Define which file to open and
+        // send the request.
+        Connect.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            alert("In ready state" )
+            document.getElementById("demo").innerHTML = this.responseXML;
+          }
+        };
+        Connect.open("GET","rods.xml", true);
+        Connect.send();
+        alert(Connect.readyState);
+        // Place the response in an XML document.
+        var TheDocument = Connect.responseXML;
+        alert(Connect.status)
+        alert(Connect);
+        alert(TheDocument)
+        // Place the root node in an element.
+
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Rod's Journal during COVID19 now in github</h1>
+    <p>
+      <em>Project Journals</em>
+      <p>
+        Started on April 1, 2020
+      </p>
+    </p>
+    <button type="button" onclick="loadDoc()">Load Me</button>
+    <div id="demo">
+      XML goes here
+    </div>
+    <hr>
+    <h3>Projects</h3>
+    <ul>
+      <li>Complete Web Site BootCamp <u>Udemy</u></li>
+      <li><a href="roaringKoala/index.html">Roaring Koala</a></li>
+    </ul>
+    <hr>
+    <h3>References and Cheat Sheets</h3>
+    <ul>
+      <li>My Cards</li>
+      <li>Complete Web Site BootCamp Syllbus</li>
+      <li>MDN References</li>
+      <li>CSS Reference</li>
+      <li><a href="https://docs.emmet.io/cheat-sheet/">Emmet Cheat Sheet</a></li>
+    </ul>
+  </body>
+</html>

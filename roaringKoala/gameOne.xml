@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<game name="Finding the Koala">
+  <cmd name="Set Time">
+    <parameter name="minutes" type="int">
+      <validataion type="re" value="1-5"/>
+    </parameter>
+    <parameter name="seconds" type="int">
+      <validataion type="re" value="0-60"/>
+    </parameter>
+  </cmd>
+  <cmd name="start"/>
+  <command name="Get Time" value="" />
+</game>
